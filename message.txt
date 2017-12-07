@@ -15,8 +15,9 @@ If you're currently visiting us via your browser, Slack provides a stand alone p
 to make staying in touch even more convenient. You can download it here:
 https://slack.com/downloads
 
-Below you'll see a list of topics. You can click on each topic to get more info. If you
-want to see the topics again just reply to me with any message.
+Below you'll see a list of topics.
+{{ what topics? }}
 
-Want to make your first change to a program right now? Click on the 'OpCode Challenge'
-button to get instructions on how to make a change to this very bot!
+Want to make your first change to a program right now? All active Operation Code Projects are located
+on our source control repository. If you wish to contribute or find a new project check here:
+https://github.com/OperationCode/START_HERE
