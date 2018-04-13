@@ -3,6 +3,7 @@ import logging
 import threading
 
 from ocbot.pipeline.slash_command_handlers.log_handlers import get_temporary_url, handle_log_view, can_view_logs
+from ocbot.pipeline.slash_command_handlers.lunch_handler import create_lunch_event
 from ocbot.pipeline.slash_command_handlers.testgreet_handler import can_test, create_testgreet_event
 from ocbot.web.route_decorators import validate_response, url_verification
 from ocbot.pipeline.routing import RoutingHandler
@@ -100,6 +101,22 @@ def get_logs():
     url = get_temporary_url(req['user_id'], req['text'])
     logger.info(f"Created log URL for {req['user_name']} : {url.url}")
     return make_response(f'{request.host_url}logs/{url.url}', 200)
+
+
+@app.route('/lunch', methods=['POST'])
+@validate_response('token', VERIFICATION_TOKEN, 'values')
+def random_lunch():
+    """
+    Endpoint for getting random lunch event.
+    Sends the notification to whichever channel the user
+    was in when running the slash-command
+    """
+    req = request.values
+    logger.info(f"Lunch request received from {req['user_name']} : {req}")
+
+    lunch_val = create_lunch_event(req)
+
+    return make_response(lunch_val, 200)
 
 
 @app.route("/logs/<variable>")

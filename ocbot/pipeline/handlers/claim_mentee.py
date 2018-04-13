@@ -43,7 +43,8 @@ class MenteeClaimHandler(RouteHandler):
                 params['attachments'] = self.mentee_claimed_attachments(self._record_id)
             else:
                 attachments = self.mentee_unclaimed_attachment(self._record_id)
-                attachments[0]['text'] = f":warning: <@{self._user_id}> not found in Mentor table. :warning:"
+                attachments[0]['text'] = (f":warning: <@{self._user_id}>'s Slack Email not"
+                                          " found in Mentor table. :warning:")
                 params['attachments'] = attachments
         else:
             params['attachments'] = self.mentee_unclaimed_attachment(self._record_id)

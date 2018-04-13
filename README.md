@@ -1,6 +1,6 @@
 # [OperationCodePyBot](https://github.com/OperationCode/operation_code_pybot)
 
-[![Build Status](https://travis-ci.org/OperationCode/operation_code_pybot.svg?branch=master)](https://travis-ci.org/OperationCode/operation_code_pybot)
+[![Build Status](https://travis-ci.org/OperationCode/operationcode_pyback.svg?branch=master)](https://travis-ci.org/OperationCode/operationcode_pyback)
 
 OperationCode PyBot is a python implementation slack chat bot built to deal with the [Slack API](https://api.slack.com).
 

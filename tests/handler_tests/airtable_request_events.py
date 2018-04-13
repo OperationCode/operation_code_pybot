@@ -103,7 +103,7 @@ RESET_MENTEE_CLAIM_EVENT = {'type': 'interactive_message',
                             'response_url': 'https://hooks.slack.com/actions/T8M8SQEN7/331230500336/J5MfM0OC6I37iV9xQSPqQ2UD',
                             'trigger_id': '332007136373.293298830755.614be10d27ebd4e3d22af708906f27e0'}
 
-INVALID_MENTOR_ID_TEXT = f":warning: <@U11111> not found in Mentor table. :warning:"
+INVALID_MENTOR_ID_TEXT = f":warning: <@U11111>'s Slack Email not found in Mentor table. :warning:"
 
 RESET_MENTEE_ATTACHMENT = [{'text': 'Reset by <@U11111> at <!date^11111^ {date_num} {time_secs}|Failed to parse time>',
                             'fallback': '', 'color': '#3AA3E3', 'callback_id': 'claim_mentee',

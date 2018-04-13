@@ -36,7 +36,7 @@ class NewAirtableRequestHandler(RouteHandler):
             self._event['Skillsets'] = 'None given'
 
         self.text_dict['message'] = f"User {self.api_dict['user']} has requested a mentor for {service}\n\n" \
-                                    f"Given Skillset(s): {self._event['Skillsets']}"
+                                    f"Requested Skillset(s): {self._event['Skillsets'].replace(',', ', ')}"
         self.text_dict['attachment'] = initial_claim_button(self._event['Record'])
         self.text_dict['details'] = f"Additional details: {self._event['Details']}"
 
