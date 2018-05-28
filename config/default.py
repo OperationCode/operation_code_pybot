@@ -22,3 +22,8 @@ PA_SSH_PASSWORD = 'password'
 PA_SSH_URL = 'url'
 PA_SSH_REMOTE_BIND_ADDR = 'addr'
 PA_SSH_REMOTE_BIND_PORT = 'port'
+
+
+BACK_JWT_TOKEN = ''
+OC_URL = ''
+DEV_GITHUB_REPO_PATH = ''
