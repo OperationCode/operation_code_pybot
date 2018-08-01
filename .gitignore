@@ -1,3 +1,6 @@
+# remove DS_Store
+.DS_Store
+
 # remove pycharm ide files
 .idea/
 
