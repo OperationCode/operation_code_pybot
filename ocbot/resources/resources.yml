@@ -323,8 +323,8 @@
   url: http://www.cyber-dojo.org/
   category: Code Challenges
   language: multiple
-  paid: Must you pay to use this resource? [true|false]
-  notes: <Addtional Comments> [optional]
+  paid: false
+  notes:
 
 - name: Check IO
   url: https://checkio.org/
@@ -5421,13 +5421,6 @@
   language: Powershell
   paid: true
   notes: some content available free
-
-- name: Powershell for Beginners
-  url:
-  category: Books
-  language: Powershell
-  paid: false
-  notes:
 
 - name: Powershell.org YouTube Channel
   url: https://www.youtube.com/powershellorg
