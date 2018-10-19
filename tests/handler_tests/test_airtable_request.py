@@ -2,7 +2,7 @@ import pytest
 import pytest_mock
 from ocbot.external.route_slack import Slack, SlackBuilder
 from ocbot.external.route_airtable import AirTableBuilder
-from config.configs import configs
+from config.all_config_loader import configs
 
 from ocbot.pipeline.handlers.airtable_request_handler import NewAirtableRequestHandler
 from tests.handler_tests.airtable_request_events import NEW_AIRTABLE_REQUEST_JSON, USER_ID_FROM_EMAIL_RESPONSE, \
@@ -12,7 +12,7 @@ RECORD_TO_SERVICE = 'ocbot.external.route_airtable.AirTableBuilder.record_to_ser
 SLACK_AUTH_TEST = 'ocbot.external.route_slack.Slack.auth_test'
 SLACK_GET_ID = 'ocbot.pipeline.handlers.airtable_request_handler.NewAirtableRequestHandler.check_user_id_cache'
 
-MENTORS_INTERNAL_CHANNEL = configs['MENTORS_INTERNAL_CHANNEL']
+MENTORS_INTERNAL_CHANNEL = configs['SLACK_MENTORS_INTERNAL_CHANNEL']
 SLACK_USER_ID = '<@AGF2354>'
 
 

@@ -3,7 +3,7 @@ import json
 import logging
 
 import pytest
-import config.configs
+import config.all_config_loader
 import ocbot.web.routes_web
 import ocbot.web.routes_slack
 from tests import VALIDATE_RESPONSE_PATH, ROUTING_HANDLER_PATH, GOOD_TOKEN
@@ -16,7 +16,7 @@ logging.disable(logging.CRITICAL)
 
 @pytest.fixture
 def test_app():
-    config.configs.configs['VERIFICATION_TOKEN'] = GOOD_TOKEN
+    config.all_config_loader.configs['VERIFICATION_TOKEN'] = GOOD_TOKEN
     from ocbot import app
     app.config['TESTING'] = True
     app.config['WTF_CSRF_ENABLED'] = False

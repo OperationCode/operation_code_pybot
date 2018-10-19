@@ -3,7 +3,7 @@ import threading
 
 from flask import request, make_response, json, redirect, url_for
 
-from config.configs import configs
+from config.all_config_loader import configs
 from ocbot import app
 from ocbot.pipeline.routing import RoutingHandler
 from ocbot.pipeline.slash_command_handlers.log_handlers import can_view_logs, get_temporary_url, handle_log_view
@@ -11,7 +11,7 @@ from ocbot.pipeline.slash_command_handlers.lunch_handler import create_lunch_eve
 from ocbot.pipeline.slash_command_handlers.testgreet_handler import can_test, create_testgreet_event
 from ocbot.web.route_decorators import url_verification, validate_response
 
-VERIFICATION_TOKEN = configs['VERIFICATION_TOKEN']
+VERIFICATION_TOKEN = configs['SLACK_VERIFICATION_TOKEN']
 
 logger = logging.getLogger(__name__)
 logger.level = logging.DEBUG

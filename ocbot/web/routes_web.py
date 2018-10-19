@@ -9,10 +9,10 @@ from flask_limiter.util import get_remote_address
 from werkzeug.datastructures import FileStorage
 
 from ocbot.pipeline.web_api_handlers.handle_code_school import handle_recaptcha_and_errors
-from config.configs import configs
+from config.all_config_loader import configs
 from ocbot import app
 
-VERIFICATION_TOKEN = configs['VERIFICATION_TOKEN']
+VERIFICATION_TOKEN = configs['SLACK_VERIFICATION_TOKEN']
 
 logger = logging.getLogger(__name__)
 logger.level = logging.DEBUG

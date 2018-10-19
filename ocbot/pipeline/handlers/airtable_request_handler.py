@@ -4,9 +4,9 @@ from typing import List
 from ocbot.external.route_airtable import AirTableBuilder, Airtable
 from ocbot.external.route_slack import SlackBuilder, Slack
 from ocbot.pipeline.handlers.abc import RouteHandler
-from config.configs import configs
+from config.all_config_loader import configs
 
-MENTORS_INTERNAL_CHANNEL = configs['MENTORS_INTERNAL_CHANNEL']
+MENTORS_INTERNAL_CHANNEL = configs['SLACK_MENTORS_INTERNAL_CHANNEL']
 
 
 class NewAirtableRequestHandler(RouteHandler):

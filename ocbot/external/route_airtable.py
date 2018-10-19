@@ -3,7 +3,7 @@ import logging
 from ocbot.external import ResponseContainer
 from requests import post, get, patch
 from functools import partial
-from config.configs import configs
+from config.all_config_loader import configs
 
 logger = logging.getLogger(__name__)
 

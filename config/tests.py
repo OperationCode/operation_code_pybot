@@ -2,10 +2,10 @@ from decouple import config
 
 PORT = 5000
 
-TOKEN = 'slack-token'
-VERIFICATION_TOKEN = 'token'
-COMMUNITY_CHANNEL = config('DEV_PRIVATE_CHANNEL', default='community_channel')
-MENTORS_INTERNAL_CHANNEL = config('DEV_PRIVATE_CHANNEL', default='mentor_channel')
+SLACK_TOKEN = 'slack-token'
+SLACK_VERIFICATION_TOKEN = 'token'
+SLACK_COMMUNITY_CHANNEL = config('DEV_PRIVATE_CHANNEL', default='community_channel')
+SLACK_MENTORS_INTERNAL_CHANNEL = config('DEV_PRIVATE_CHANNEL', default='mentor_channel')
 
 AIRTABLE_BASE_KEY = config('DEV_AIRTABLE_BASE_KEY', default='fake_airtable_base')
 AIRTABLE_API_KEY = config('DEV_AIRTABLE_TOKEN', default='fake_airtable_key')
@@ -17,12 +17,10 @@ DB_DIALECT = config('DEV_DB_DIALECT', default='sqlite')
 DB_ADDR = config('DEV_DB_ADDR', default='dev.db')
 DB_NAME = config('DEV_DB_NAME', default='')
 
-PA_SSH_USERNAME = config('PA_SSH_USERNAME', default=None)
-PA_SSH_PASSWORD = config('PA_SSH_PASSWORD', default=None)
-PA_SSH_URL = config('PA_SSH_URL', default=None)
-PA_SSH_REMOTE_BIND_ADDR = config('PA_PG_IP_ADDR', cast=str, default=None)
-PA_SSH_REMOTE_BIND_PORT = config('PA_PG_PORT', cast=int, default=0)
+GOOGLE_RECAPTCHA_SECRET = 'secret'
 
-RECAPTCHA_SECRET = 'secret'
 GITHUB_JWT = 'jwt'
 GITHUB_REPO_PATH = config('DEV_GITHUB_REPO_PATH')
+
+OC_BACKEND_JWT_TOKEN = config('OC_BACKEND_JWT_TOKEN')
+OC_BACKEND_URL = config('OC_BACKEND_URL')

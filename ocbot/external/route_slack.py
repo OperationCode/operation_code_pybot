@@ -5,11 +5,11 @@ from uuid import UUID
 
 from slackclient import SlackClient
 
-from config.configs import configs
+from config.all_config_loader import configs
 from ocbot.external import ResponseContainer
 
-VERIFICATION_TOKEN = configs['VERIFICATION_TOKEN']
-TOKEN = configs['TOKEN']
+VERIFICATION_TOKEN = configs['SLACK_VERIFICATION_TOKEN']
+TOKEN = configs['SLACK_TOKEN']
 
 logger = logging.getLogger(__name__)
 

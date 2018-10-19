@@ -1,0 +1,7 @@
+#!/bin/bash
+
+AWS_VARS=eb printenv | sed -n 's/ *\([A-Z_]*\) =.*/\1/p'
+
+NEW_PROD_VARS=cat ../config/awsProd.py | sed '/#/d' |sed -n 's/ *\([A-Z_]\) =.*/\1/p'
+
+MISMATCH=comm -1 -3 <sort($AWS_VARS) < sort($NEW_PROD_VARS)

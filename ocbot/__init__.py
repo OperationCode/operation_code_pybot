@@ -2,7 +2,7 @@ import logging
 import os
 
 from flask import Flask
-from config.configs import configs
+from config.all_config_loader import configs
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
